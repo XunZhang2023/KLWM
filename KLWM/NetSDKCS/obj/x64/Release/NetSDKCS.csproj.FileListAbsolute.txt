@@ -1,0 +1,6 @@
+D:\盛世沛金\02项目\2025\05远程仓库升级\KLWM\NetSDKCS\bin\x64\Release\NetSDKCS.dll
+D:\盛世沛金\02项目\2025\05远程仓库升级\KLWM\NetSDKCS\bin\x64\Release\NetSDKCS.pdb
+D:\盛世沛金\02项目\2025\05远程仓库升级\KLWM\NetSDKCS\obj\x64\Release\NetSDKCS.csproj.AssemblyReference.cache
+D:\盛世沛金\02项目\2025\05远程仓库升级\KLWM\NetSDKCS\obj\x64\Release\NetSDKCS.csproj.CoreCompileInputs.cache
+D:\盛世沛金\02项目\2025\05远程仓库升级\KLWM\NetSDKCS\obj\x64\Release\NetSDKCS.dll
+D:\盛世沛金\02项目\2025\05远程仓库升级\KLWM\NetSDKCS\obj\x64\Release\NetSDKCS.pdb

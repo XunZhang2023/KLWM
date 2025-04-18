@@ -1,0 +1,16 @@
+D:\盛世沛金\02项目\2025\05远程仓库升级\KLWM\KLWM\obj\Release\KLWM.csproj.AssemblyReference.cache
+D:\盛世沛金\02项目\2025\05远程仓库升级\KLWM\KLWM\obj\Release\KLWM.frmMain.resources
+D:\盛世沛金\02项目\2025\05远程仓库升级\KLWM\KLWM\obj\Release\KLWM.Properties.Resources.resources
+D:\盛世沛金\02项目\2025\05远程仓库升级\KLWM\KLWM\obj\Release\KLWM.UserControls.UInStorage.resources
+D:\盛世沛金\02项目\2025\05远程仓库升级\KLWM\KLWM\obj\Release\KLWM.UserControls.UOuttorage.resources
+D:\盛世沛金\02项目\2025\05远程仓库升级\KLWM\KLWM\obj\Release\KLWM.UserControls.UPeopleManager.resources
+D:\盛世沛金\02项目\2025\05远程仓库升级\KLWM\KLWM\obj\Release\KLWM.UserControls.UProductType.resources
+D:\盛世沛金\02项目\2025\05远程仓库升级\KLWM\KLWM\obj\Release\KLWM.UserControls.UStorages.resources
+D:\盛世沛金\02项目\2025\05远程仓库升级\KLWM\KLWM\obj\Release\KLWM.UserFroms.frmCount.resources
+D:\盛世沛金\02项目\2025\05远程仓库升级\KLWM\KLWM\obj\Release\KLWM.UserFroms.frmInStorage.resources
+D:\盛世沛金\02项目\2025\05远程仓库升级\KLWM\KLWM\obj\Release\KLWM.UserFroms.frmOutStorage.resources
+D:\盛世沛金\02项目\2025\05远程仓库升级\KLWM\KLWM\obj\Release\KLWM.UserFroms.frmProductADD.resources
+D:\盛世沛金\02项目\2025\05远程仓库升级\KLWM\KLWM\obj\Release\KLWM.UserFroms.Kanban.resources
+D:\盛世沛金\02项目\2025\05远程仓库升级\KLWM\KLWM\obj\Release\KLWM.UserFroms.frmUserADD.resources
+D:\盛世沛金\02项目\2025\05远程仓库升级\KLWM\KLWM\obj\Release\KLWM.csproj.GenerateResource.cache
+D:\盛世沛金\02项目\2025\05远程仓库升级\KLWM\KLWM\obj\Release\KLWM.exe.licenses

@@ -1,0 +1,431 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|d:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\klwm\\klwm\\usercontrols\\kanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\usercontrols\\kanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\klwm\\auxiliary\\dahuahelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\auxiliary\\dahuahelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\klwm\\usercontrols\\kanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\usercontrols\\kanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\klwm\\auxiliary\\staticdelegates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\auxiliary\\staticdelegates.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\klwm\\usercontrols\\uproducttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\usercontrols\\uproducttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\klwm\\usercontrols\\uproducttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\usercontrols\\uproducttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\klwm\\datacore\\model\\wproductinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\datacore\\model\\wproductinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\klwm\\userfroms\\frmproductadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\userfroms\\frmproductadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\klwm\\auxiliary\\npoihelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\auxiliary\\npoihelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\klwm\\usercontrols\\upeoplemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\usercontrols\\upeoplemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\klwm\\userfroms\\frmproductadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\userfroms\\frmproductadd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\klwm\\userfroms\\frmcount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\userfroms\\frmcount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\klwm\\userfroms\\frminstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\userfroms\\frminstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\klwm\\userfroms\\frmoutstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\userfroms\\frmoutstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\klwm\\userfroms\\frmuseradd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\userfroms\\frmuseradd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\klwm\\usercontrols\\uinstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\usercontrols\\uinstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\klwm\\usercontrols\\uouttorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\usercontrols\\uouttorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\klwm\\usercontrols\\ustorages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\usercontrols\\ustorages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\klwm\\userfroms\\frmuseradd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\userfroms\\frmuseradd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\klwm\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\klwm\\auxiliary\\scandrivercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\auxiliary\\scandrivercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\klwm\\datacore\\model\\wproducttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\datacore\\model\\wproducttype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\klwm\\userfroms\\frmcount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\userfroms\\frmcount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\klwm\\datacore\\model\\woutstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\datacore\\model\\woutstore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\klwm\\datacore\\model\\storechange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\datacore\\model\\storechange.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\klwm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Kanban.cs",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\UserControls\\Kanban.cs",
+              "RelativeDocumentMoniker": "KLWM\\UserControls\\Kanban.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\UserControls\\Kanban.cs",
+              "RelativeToolTip": "KLWM\\UserControls\\Kanban.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAABQAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T09:12:10.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UProductType.cs",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\UserControls\\UProductType.cs",
+              "RelativeDocumentMoniker": "KLWM\\UserControls\\UProductType.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\UserControls\\UProductType.cs",
+              "RelativeToolTip": "KLWM\\UserControls\\UProductType.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAywH0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T05:45:03.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "frmOutStorage.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\UserFroms\\frmOutStorage.cs",
+              "RelativeDocumentMoniker": "KLWM\\UserFroms\\frmOutStorage.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\KLWM\\KLWM\\UserFroms\\frmOutStorage.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "..\\..\\KLWM\\KLWM\\UserFroms\\frmOutStorage.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T06:17:13.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "frmInStorage.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\UserFroms\\frmInStorage.cs",
+              "RelativeDocumentMoniker": "KLWM\\UserFroms\\frmInStorage.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\KLWM\\KLWM\\UserFroms\\frmInStorage.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "..\\..\\KLWM\\KLWM\\UserFroms\\frmInStorage.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T09:02:29.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frmCount.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\UserFroms\\frmCount.cs",
+              "RelativeDocumentMoniker": "KLWM\\UserFroms\\frmCount.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\KLWM\\KLWM\\UserFroms\\frmCount.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "..\\..\\KLWM\\KLWM\\UserFroms\\frmCount.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T08:28:57.329Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UProductType.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\UserControls\\UProductType.cs",
+              "RelativeDocumentMoniker": "KLWM\\UserControls\\UProductType.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\KLWM\\KLWM\\UserControls\\UProductType.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "..\\..\\KLWM\\KLWM\\UserControls\\UProductType.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T09:13:52.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Kanban.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\UserControls\\Kanban.cs",
+              "RelativeDocumentMoniker": "KLWM\\UserControls\\Kanban.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\KLWM\\KLWM\\UserControls\\Kanban.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "..\\..\\KLWM\\KLWM\\UserControls\\Kanban.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T03:45:51.781Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StaticDelegates.cs",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\Auxiliary\\StaticDelegates.cs",
+              "RelativeDocumentMoniker": "KLWM\\Auxiliary\\StaticDelegates.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\Auxiliary\\StaticDelegates.cs",
+              "RelativeToolTip": "KLWM\\Auxiliary\\StaticDelegates.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwFcAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T09:05:18.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DaHuaHelper.cs",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\Auxiliary\\DaHuaHelper.cs",
+              "RelativeDocumentMoniker": "KLWM\\Auxiliary\\DaHuaHelper.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\Auxiliary\\DaHuaHelper.cs",
+              "RelativeToolTip": "KLWM\\Auxiliary\\DaHuaHelper.cs",
+              "ViewState": "AgIAAMgAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T09:22:34.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "frmUserADD.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\UserFroms\\frmUserADD.cs",
+              "RelativeDocumentMoniker": "KLWM\\UserFroms\\frmUserADD.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\KLWM\\KLWM\\UserFroms\\frmUserADD.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "..\\..\\KLWM\\KLWM\\UserFroms\\frmUserADD.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T02:23:28.938Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "NpoiHelper.cs",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\Auxiliary\\NpoiHelper.cs",
+              "RelativeDocumentMoniker": "KLWM\\Auxiliary\\NpoiHelper.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\Auxiliary\\NpoiHelper.cs",
+              "RelativeToolTip": "KLWM\\Auxiliary\\NpoiHelper.cs",
+              "ViewState": "AgIAAKoAAAAAAAAAAIA0wMkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T08:39:09.542Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WProductInfo.cs",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\DataCore\\Model\\WProductInfo.cs",
+              "RelativeDocumentMoniker": "KLWM\\DataCore\\Model\\WProductInfo.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\DataCore\\Model\\WProductInfo.cs",
+              "RelativeToolTip": "KLWM\\DataCore\\Model\\WProductInfo.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAvwDsAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T05:10:18.511Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmProductADD.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\UserFroms\\frmProductADD.cs",
+              "RelativeDocumentMoniker": "KLWM\\UserFroms\\frmProductADD.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\KLWM\\KLWM\\UserFroms\\frmProductADD.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "..\\..\\KLWM\\KLWM\\UserFroms\\frmProductADD.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T06:39:34.126Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmProductADD.cs",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\UserFroms\\frmProductADD.cs",
+              "RelativeDocumentMoniker": "KLWM\\UserFroms\\frmProductADD.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\UserFroms\\frmProductADD.cs",
+              "RelativeToolTip": "KLWM\\UserFroms\\frmProductADD.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAMwFMAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T06:37:28.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UPeopleManager.cs",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\UserControls\\UPeopleManager.cs",
+              "RelativeDocumentMoniker": "KLWM\\UserControls\\UPeopleManager.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\UserControls\\UPeopleManager.cs",
+              "RelativeToolTip": "KLWM\\UserControls\\UPeopleManager.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAcwHIAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-17T02:19:27.6Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UInStorage.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\UserControls\\UInStorage.cs",
+              "RelativeDocumentMoniker": "KLWM\\UserControls\\UInStorage.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\KLWM\\KLWM\\UserControls\\UInStorage.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "..\\..\\KLWM\\KLWM\\UserControls\\UInStorage.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T00:46:02.319Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UOuttorage.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\UserControls\\UOuttorage.cs",
+              "RelativeDocumentMoniker": "KLWM\\UserControls\\UOuttorage.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\KLWM\\KLWM\\UserControls\\UOuttorage.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "..\\..\\KLWM\\KLWM\\UserControls\\UOuttorage.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T08:27:14.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UStorages.cs",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\UserControls\\UStorages.cs",
+              "RelativeDocumentMoniker": "KLWM\\UserControls\\UStorages.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\UserControls\\UStorages.cs",
+              "RelativeToolTip": "KLWM\\UserControls\\UStorages.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAqwEsAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T07:19:26.959Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "frmUserADD.cs",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\UserFroms\\frmUserADD.cs",
+              "RelativeDocumentMoniker": "KLWM\\UserFroms\\frmUserADD.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\UserFroms\\frmUserADD.cs",
+              "RelativeToolTip": "KLWM\\UserFroms\\frmUserADD.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAA2wF0AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T07:02:44.155Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "frmCount.cs",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\UserFroms\\frmCount.cs",
+              "RelativeDocumentMoniker": "KLWM\\UserFroms\\frmCount.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\UserFroms\\frmCount.cs",
+              "RelativeToolTip": "KLWM\\UserFroms\\frmCount.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T00:31:13.348Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Storechange.cs",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\DataCore\\Model\\Storechange.cs",
+              "RelativeDocumentMoniker": "KLWM\\DataCore\\Model\\Storechange.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\DataCore\\Model\\Storechange.cs",
+              "RelativeToolTip": "KLWM\\DataCore\\Model\\Storechange.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAswBEAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T08:12:41.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "frmMain.cs [\u8BBE\u8BA1]",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\frmMain.cs",
+              "RelativeDocumentMoniker": "KLWM\\frmMain.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\KLWM\\KLWM\\frmMain.cs [\u8BBE\u8BA1]",
+              "RelativeToolTip": "..\\..\\KLWM\\KLWM\\frmMain.cs [\u8BBE\u8BA1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T05:09:29.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "WOutstore.cs",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\DataCore\\Model\\WOutstore.cs",
+              "RelativeDocumentMoniker": "KLWM\\DataCore\\Model\\WOutstore.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\DataCore\\Model\\WOutstore.cs",
+              "RelativeToolTip": "KLWM\\DataCore\\Model\\WOutstore.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAQwFAAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T09:05:12.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ScanDriverContext.cs",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\Auxiliary\\ScanDriverContext.cs",
+              "RelativeDocumentMoniker": "KLWM\\Auxiliary\\ScanDriverContext.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\Auxiliary\\ScanDriverContext.cs",
+              "RelativeToolTip": "KLWM\\Auxiliary\\ScanDriverContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-15T06:03:27.336Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "WProductType.cs",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\DataCore\\Model\\WProductType.cs",
+              "RelativeDocumentMoniker": "KLWM\\DataCore\\Model\\WProductType.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\DataCore\\Model\\WProductType.cs",
+              "RelativeToolTip": "KLWM\\DataCore\\Model\\WProductType.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAYwCIAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T09:06:17.162Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\Program.cs",
+              "RelativeDocumentMoniker": "KLWM\\Program.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\20250418\\KLWM\\KLWM\\Program.cs",
+              "RelativeToolTip": "KLWM\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T05:58:25.391Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

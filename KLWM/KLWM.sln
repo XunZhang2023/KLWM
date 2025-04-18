@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KLWM", "KLWM\KLWM.csproj", "{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetSDKCS", "..\..\设备网络SDK_CSharp_Win64_IS_V3.058.0000004.0.R.241021\Demos\TargetRecognition\NetSDKCS\NetSDKCS.csproj", "{60CFBA25-F7CE-4140-A7E3-5355A25198E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}.Debug|x64.ActiveCfg = Debug|x64
+		{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}.Debug|x64.Build.0 = Debug|x64
+		{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}.Release|x64.ActiveCfg = Release|x64
+		{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}.Release|x64.Build.0 = Release|x64
+		{60CFBA25-F7CE-4140-A7E3-5355A25198E5}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{60CFBA25-F7CE-4140-A7E3-5355A25198E5}.Debug|Any CPU.Build.0 = Debug|x64
+		{60CFBA25-F7CE-4140-A7E3-5355A25198E5}.Debug|x64.ActiveCfg = Debug|x64
+		{60CFBA25-F7CE-4140-A7E3-5355A25198E5}.Debug|x64.Build.0 = Debug|x64
+		{60CFBA25-F7CE-4140-A7E3-5355A25198E5}.Release|Any CPU.ActiveCfg = Release|x64
+		{60CFBA25-F7CE-4140-A7E3-5355A25198E5}.Release|Any CPU.Build.0 = Release|x64
+		{60CFBA25-F7CE-4140-A7E3-5355A25198E5}.Release|x64.ActiveCfg = Release|x64
+		{60CFBA25-F7CE-4140-A7E3-5355A25198E5}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D14731B-32E7-4746-A781-02A21E2FEE9D}
+	EndGlobalSection
+EndGlobal
