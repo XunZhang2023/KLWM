@@ -54,7 +54,8 @@ namespace KLWM.Auxiliary
 
         private static string GetSpell(char chr)
         {
-            var coverchr = NPinyin.Pinyin.GetPinyin(chr);
+            //var coverchr = NPinyin.Pinyin.GetPinyin(chr);
+            var coverchr ="";
             return coverchr;
         }
     }

@@ -20,7 +20,11 @@ namespace KLWM.Auxiliary
         {
             wUserinfo.PropertyChanged += WUserinfo_PropertyChanged;
         }
-        public delegate void RspBarcode(string cPort, string barcode);
+        private static void ScanDriverContext_OnRspBarcode(string barcode)
+        {
+            OnRspBarcode?.Invoke(barcode);
+        }
+        public delegate void RspBarcode(string barcode);
         /// <summary>
         /// 扫描触发
         /// </summary>
@@ -51,19 +55,16 @@ namespace KLWM.Auxiliary
         /// 看板出库
         /// </summary>
         public static event RspKanbanDataOutChange OnRspKanbanDataOutChange;
-
         public delegate void RspInOrOutCountChange(Double inOrOutCount);
         /// <summary>
         /// 出入库数量输入
         /// </summary>
         public static event RspInOrOutCountChange OnRspInOrOutCountChange;
-
         public delegate void RspUserInfoChange(UserInfoStruct userContext);
         /// <summary>
         /// 人员信息变动
         /// </summary>
         public static event RspUserInfoChange OnRspUserInfoChange;
-
         public static void SetInOrOutCount(Double inOrOutCount)
         {
             OnRspInOrOutCountChange?.Invoke(inOrOutCount);
@@ -87,6 +88,5 @@ namespace KLWM.Auxiliary
 
             OnRspUserInfoChange?.Invoke(userInfoStruct);
         }
-
     }
 }

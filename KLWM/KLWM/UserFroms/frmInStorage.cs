@@ -50,6 +50,7 @@ namespace KLWM.UserFroms
                 if (wProductInfo == null)
                 {
                     MessageBox.Show("为找到该备件信息！请添加备件信息！");
+                        return;
                 }
                 WInstore wInstore = new WInstore()
                 {
@@ -128,53 +129,62 @@ namespace KLWM.UserFroms
         /// <param name="e"></param>
         private void btnInStore_Click(object sender, EventArgs e)
         {
-            DbContext.MySql.Transaction(() =>
+            try
             {
-                //保存入库表
-                var affrows = DbContext.MySql.Insert<WInstore>().AppendData(InStores).ExecuteAffrows();
-                if (affrows < 1)
+                var affrows = 0;
+                DbContext.MySql.Transaction(() =>
                 {
-                    MessageBox.Show("数据存储失败！事务逻辑不会造成脏数据！");
-                    return;
-                }
-                //保存库存表
-                foreach (var item in InStores)
-                {
-                    Thread.Sleep(10);
-                    WStores wStore = DbContext.MySql.Select<WStores>().Where(a => a.PNo == item.PNo).First();
-                    WStores newWStores = new WStores()
+                    //保存库存表
+                    foreach (var item in InStores)
                     {
-                        PNo = item.PNo,
-                        PName = item.PName,
-                        PType = item.PType,
-                        PManufacturer = item.PManufacturer,
-                        PSize = item.PSize,
-                        PUnit = item.PUnit,
-                        ValidFlag = 1
-                    };
-                    if (wStore != null)
-                    {
-                        newWStores.PCount = item.InCount + wStore.PCount;
-                        newWStores.Id = wStore.Id;
-                        newWStores.CTime = wStore.CTime;
-                        affrows = DbContext.MySql.Update<WStores>().SetSource(newWStores).ExecuteAffrows();
+                        Thread.Sleep(10);
+                        WStores wStore = DbContext.MySql.Select<WStores>().Where(a => a.PNo == item.PNo).First();
+                        WStores newWStores = new WStores()
+                        {
+                            PNo = item.PNo,
+                            PName = item.PName,
+                            PType = item.PType,
+                            PManufacturer = item.PManufacturer,
+                            PSize = item.PSize,
+                            PUnit = item.PUnit,
+                            ValidFlag = 1
+                        };
+                        if (wStore != null)
+                        {
+                            newWStores.PCount = item.InCount + wStore.PCount;
+                            newWStores.Id = wStore.Id;
+                            newWStores.CTime = wStore.CTime;
+                            affrows = DbContext.MySql.Update<WStores>().SetSource(newWStores).ExecuteAffrows();
+                        }
+                        else
+                        {
+                            newWStores.PCount = item.InCount;
+                            newWStores.CTime = DateTime.Now;
+                            affrows = DbContext.MySql.Insert<WStores>().AppendData(newWStores).ExecuteAffrows();
+                        }
+                        if (affrows < 1)
+                        {
+                            MessageBox.Show("数据存储失败！事务逻辑不会造成脏数据！");
+                            return;
+                        }
                     }
-                    else
-                    {
-                        newWStores.PCount = item.InCount;
-                        newWStores.CTime = DateTime.Now;
-                        affrows = DbContext.MySql.Insert<WStores>().AppendData(newWStores).ExecuteAffrows();
-                    }
+                    //保存入库表
+                    affrows = DbContext.MySql.Insert<WInstore>().AppendData(InStores).ExecuteAffrows();
                     if (affrows < 1)
                     {
                         MessageBox.Show("数据存储失败！事务逻辑不会造成脏数据！");
                         return;
                     }
-                }
-                MessageBox.Show("入库成功！");
-                InStores.Clear();
-                StaticDelegates.KanbanDataInChange();
-            });
+                    MessageBox.Show("入库成功！");
+                    InStores.Clear();
+                    StaticDelegates.KanbanDataInChange();
+                });
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KLWM", "KLWM\KLWM.csproj", "{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetSDKCS", "..\..\设备网络SDK_CSharp_Win64_IS_V3.058.0000004.0.R.241021\Demos\TargetRecognition\NetSDKCS\NetSDKCS.csproj", "{60CFBA25-F7CE-4140-A7E3-5355A25198E5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetSDKCS", "NetSDKCS\NetSDKCS.csproj", "{60CFBA25-F7CE-4140-A7E3-5355A25198E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

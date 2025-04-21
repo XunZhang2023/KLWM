@@ -3,6 +3,7 @@ using DevExpress.XtraBars.Navigation;
 using KLWM.Auxiliary;
 using KLWM.UserControls;
 using KLWM.UserFroms;
+using ProcessControlSystem;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

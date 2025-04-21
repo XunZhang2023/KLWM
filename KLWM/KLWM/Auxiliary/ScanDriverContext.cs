@@ -20,13 +20,14 @@ namespace ProcessControlSystem
         public delegate void RspBarcode(string barcode);
         public static event RspBarcode OnRspBarcode;
 
+        public static ScanDriver driver = new ScanDriver();
+
         public static TData InitScanDriver()
         {
             string port = ConfigurationManager.AppSettings["Comport"];
-            int bps = Convert.ToInt32(ConfigurationManager.AppSettings["Bps"]);
+            int bps = Convert.ToUInt16(ConfigurationManager.AppSettings["Bps"]);
             try
             {
-                ScanDriver driver = new ScanDriver();
                 if (!driver.Connection(port,bps))
                 {
                     MessageBox.Show("扫码枪连接失败！请正确连接扫码枪！");

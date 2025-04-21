@@ -1,5 +1,6 @@
 ﻿using DevExpress.Skins;
 using DevExpress.UserSkins;
+using KLWM.Auxiliary;
 using ProcessControlSystem;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace KLWM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //ScanDriverContext.InitScanDriver();
+            ScanDriverContext.InitScanDriver();
             Application.Run(new frmMain());
         }
     }

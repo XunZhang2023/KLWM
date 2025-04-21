@@ -569,11 +569,9 @@ namespace KLWM.UserFroms
             ((System.ComponentModel.ISupportInitialize)(this.dgvinstore)).EndInit();
             this.ResumeLayout(false);
 
-
             this.dgvinstore.AutoGenerateColumns = false;
             this.dgvoutstore.AutoGenerateColumns = false;
             this.dgvstore.AutoGenerateColumns = false;
-
         }
 
         #endregion

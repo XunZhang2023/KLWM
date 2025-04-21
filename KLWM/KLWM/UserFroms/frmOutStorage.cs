@@ -120,56 +120,73 @@ namespace KLWM.UserFroms
         /// <param name="e"></param>
         private void btnOutStore_Click(object sender, EventArgs e)
         {
-            DbContext.MySql.Transaction(() => {
-                //保存出库表
-                var affrows = DbContext.MySql.Insert<WOutstore>().AppendData(OutStores).ExecuteAffrows();
-                if (affrows < 1)
-                {
-                    MessageBox.Show("数据存储失败！事务逻辑不会造成脏数据！");
-                    return;
-                }
-                //保存库存表
-                foreach (var item in OutStores)
-                {
-                    Thread.Sleep(10);
-                    WStores wStore = DbContext.MySql.Select<WStores>().Where(a => a.PNo == item.PNo).First();
-                    WStores newWStores = new WStores()
+            try
+            {
+                var affrows=0;
+                DbContext.MySql.Transaction(() => {
+                    //保存库存表
+                    foreach (var item in OutStores)
                     {
-                        PNo = item.PNo,
-                        PName = item.PName,
-                        PType = item.PType,
-                        PManufacturer = item.PManufacturer,
-                        PSize = item.PSize,
-                        PUnit = item.PUnit,
-                        ValidFlag = 1
-                    };
-                    if (wStore != null)
-                    {
-                        if (item.POutCount > wStore.PCount)
+                        Thread.Sleep(10);
+                        WStores wStore = DbContext.MySql.Select<WStores>().Where(a => a.PNo == item.PNo).First();
+                        WStores newWStores = new WStores()
                         {
-                            MessageBox.Show("库存数量不足！请确认出库数量！");
+                            PNo = item.PNo,
+                            PName = item.PName,
+                            PType = item.PType,
+                            PManufacturer = item.PManufacturer,
+                            PSize = item.PSize,
+                            PUnit = item.PUnit,
+                            ValidFlag = 1
+                        };
+                        if (wStore != null)
+                        {
+                            if (item.POutCount > wStore.PCount)
+                            {
+                                MessageBox.Show(newWStores.PNo + "库存数量不足！请确认出库数量！");
+                                WOutstore OutStore = OutStores.Where(a => a.PNo == item.PNo && a.POutCount == item.POutCount).First();
+                                Invoke(new Action(() =>
+                                {
+                                    dgvOutStore.Rows.RemoveAt(OutStores.IndexOf(OutStore));
+                                    OutStores.Remove(OutStore);
+                                    dgvOutStore.Refresh();
+                                }));
+                                return;
+                            }
+                            newWStores.PCount = wStore.PCount - item.POutCount;
+                            newWStores.Id = wStore.Id;
+                            newWStores.CTime = wStore.CTime;
+                            affrows = DbContext.MySql.Update<WStores>().SetSource(newWStores).ExecuteAffrows();
+                        }
+                        else
+                        {
+                            MessageBox.Show("未找到此备件！请确认已入库或检查备件编码是否正确！");
                             return;
                         }
-                        newWStores.PCount = wStore.PCount - item.POutCount;
-                        newWStores.Id = wStore.Id;
-                        newWStores.CTime = wStore.CTime;
-                        affrows = DbContext.MySql.Update<WStores>().SetSource(newWStores).ExecuteAffrows();
+                        if (affrows < 1)
+                        {
+                            MessageBox.Show("数据存储失败！事务逻辑不会造成脏数据！");
+                            return;
+                        }
                     }
-                    else
-                    {
-                        MessageBox.Show("未找到此备件！请确认已入库或检查备件编码是否正确！");
-                        return;
-                    }
+
+                    //保存出库表
+                    affrows = DbContext.MySql.Insert<WOutstore>().AppendData(OutStores).ExecuteAffrows();
                     if (affrows < 1)
                     {
                         MessageBox.Show("数据存储失败！事务逻辑不会造成脏数据！");
                         return;
                     }
-                }
-                MessageBox.Show("出库成功！");
-                OutStores.Clear();
-                StaticDelegates.KanbanDataOutChange();
-            });
+                    MessageBox.Show("出库成功！");
+                    OutStores.Clear();
+                    StaticDelegates.KanbanDataOutChange();
+                });
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
         /// <summary>
         /// 手动添加
