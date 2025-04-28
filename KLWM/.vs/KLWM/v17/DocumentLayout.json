@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\git\\KLWM\\KLWM\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|d:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\git\\klwm\\klwm\\klwm\\usercontrols\\uinstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\usercontrols\\uinstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|d:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\git\\klwm\\klwm\\klwm\\usercontrols\\kanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\usercontrols\\kanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|d:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\git\\klwm\\klwm\\klwm\\usercontrols\\ucamerainfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\usercontrols\\ucamerainfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|d:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\git\\klwm\\klwm\\klwm\\userfroms\\frminstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\userfroms\\frminstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|d:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\git\\klwm\\klwm\\klwm\\usercontrols\\uinstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\usercontrols\\uinstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\git\\KLWM\\KLWM\\klwm\\usercontrols\\uinstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFDD5333-D2FF-4EFD-BE9A-2B565736929F}|KLWM\\KLWM.csproj|solutionrelative:klwm\\usercontrols\\uinstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,7 +38,46 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UCameraInfo.cs",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\git\\KLWM\\KLWM\\KLWM\\UserControls\\UCameraInfo.cs",
+              "RelativeDocumentMoniker": "KLWM\\UserControls\\UCameraInfo.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\git\\KLWM\\KLWM\\KLWM\\UserControls\\UCameraInfo.cs",
+              "RelativeToolTip": "KLWM\\UserControls\\UCameraInfo.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T06:38:04.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmInStorage.cs",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\git\\KLWM\\KLWM\\KLWM\\UserFroms\\frmInStorage.cs",
+              "RelativeDocumentMoniker": "KLWM\\UserFroms\\frmInStorage.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\git\\KLWM\\KLWM\\KLWM\\UserFroms\\frmInStorage.cs",
+              "RelativeToolTip": "KLWM\\UserFroms\\frmInStorage.cs",
+              "ViewState": "AgIAAJoAAAAAAAAAAAA2wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T06:37:55.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Kanban.cs",
+              "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\git\\KLWM\\KLWM\\KLWM\\UserControls\\Kanban.cs",
+              "RelativeDocumentMoniker": "KLWM\\UserControls\\Kanban.cs",
+              "ToolTip": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\git\\KLWM\\KLWM\\KLWM\\UserControls\\Kanban.cs",
+              "RelativeToolTip": "KLWM\\UserControls\\Kanban.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAA0wDUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-28T06:37:38.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "UInStorage.cs",
               "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\git\\KLWM\\KLWM\\KLWM\\UserControls\\UInStorage.cs",
               "RelativeDocumentMoniker": "KLWM\\UserControls\\UInStorage.cs",
@@ -39,7 +90,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "UInStorage.cs [\u8BBE\u8BA1]",
               "DocumentMoniker": "D:\\\u76DB\u4E16\u6C9B\u91D1\\02\u9879\u76EE\\2025\\05\u8FDC\u7A0B\u4ED3\u5E93\u5347\u7EA7\\git\\KLWM\\KLWM\\KLWM\\UserControls\\UInStorage.cs",
               "RelativeDocumentMoniker": "KLWM\\UserControls\\UInStorage.cs",
