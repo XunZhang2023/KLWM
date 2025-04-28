@@ -218,6 +218,7 @@
     <Compile Include="DataCore\Context\UserInfoStruct.cs" />
     <Compile Include="DataCore\DbContext.cs" />
     <Compile Include="DataCore\Model\Storechange.cs" />
+    <Compile Include="DataCore\Model\WCameraLog.cs" />
     <Compile Include="DataCore\Model\WInstore.cs" />
     <Compile Include="DataCore\Model\WOutstore.cs" />
     <Compile Include="DataCore\Model\WProductInfo.cs" />
@@ -232,6 +233,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\UCameraInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCameraInfo.Designer.cs">
+      <DependentUpon>UCameraInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UInStorage.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -311,6 +318,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UserControls\UCameraInfo.resx">
+      <DependentUpon>UCameraInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UInStorage.resx">
       <DependentUpon>UInStorage.cs</DependentUpon>
     </EmbeddedResource>

@@ -132,12 +132,14 @@ namespace KLWM.UserFroms
             try
             {
                 var affrows = 0;
+                string ProductNos = "";
                 DbContext.MySql.Transaction(() =>
                 {
                     //保存库存表
                     foreach (var item in InStores)
                     {
                         Thread.Sleep(10);
+                        ProductNos += ("" + item.PNo);
                         WStores wStore = DbContext.MySql.Select<WStores>().Where(a => a.PNo == item.PNo).First();
                         WStores newWStores = new WStores()
                         {
@@ -175,6 +177,10 @@ namespace KLWM.UserFroms
                         MessageBox.Show("数据存储失败！事务逻辑不会造成脏数据！");
                         return;
                     }
+
+                    //更新摄像头事件状态
+                    StaticDelegates.OnCameraDataChange(1, ProductNos);
+
                     MessageBox.Show("入库成功！");
                     InStores.Clear();
                     StaticDelegates.KanbanDataInChange();

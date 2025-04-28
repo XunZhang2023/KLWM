@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraEditors.Filtering;
 using NetSDKCS;
+using NPOI.OpenXmlFormats.Vml;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -11,6 +12,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Services.Description;
 using System.Windows.Forms;
+using TrainLoadingRefactor.DataCore.DataModel;
 
 namespace KLWM.Auxiliary
 {
@@ -38,6 +40,7 @@ namespace KLWM.Auxiliary
         private static string _password="Pass@123";
 
         public static event Action DeviceDisconnected;
+        private const int m_WaitTime = 3000;
         private static void OnDeviceDisconnected()
         {
             if (null != DeviceDisconnected)
@@ -214,6 +217,7 @@ namespace KLWM.Auxiliary
             {
                 switch (dwEventType)
                 {
+                    //人脸识别
                     case (uint)EM_EVENT_IVS_TYPE.FACERECOGNITION:
                         {
                             NET_DEV_EVENT_FACERECOGNITION_INFO info = (NET_DEV_EVENT_FACERECOGNITION_INFO)Marshal.PtrToStructure(pEventInfo, typeof(NET_DEV_EVENT_FACERECOGNITION_INFO));
@@ -292,30 +296,141 @@ namespace KLWM.Auxiliary
                             }
                         }
                         break;
-                   
+                    //人脸检测
+                    case (uint)EM_EVENT_IVS_TYPE.FACEDETECT:
+                        {
+                            NET_DEV_EVENT_FACEDETECT_INFO info = (NET_DEV_EVENT_FACEDETECT_INFO)Marshal.PtrToStructure(pEventInfo, typeof(NET_DEV_EVENT_FACEDETECT_INFO));
+                            if (m_GroupID != info.stuObject.nRelativeID)
+                            {
+                                m_GroupID = info.stuObject.nObjectID;
+                                byte[] globalScenePicInfo = new byte[dwBufSize];
+                                Marshal.Copy(pBuffer, globalScenePicInfo, 0, (int)dwBufSize);
+                                using (MemoryStream stream = new MemoryStream(globalScenePicInfo))
+                                {
+                                    try // add try catch for catch exception when the stream is not image format,and the stream is from device.
+                                    {
+                                        //Image globalSceneImage = Image.FromStream(stream);
+                                        //pictureBox_image.Image = globalSceneImage;
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        Console.WriteLine(ex);
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                byte[] personFaceInfo = new byte[dwBufSize];
+                                Marshal.Copy(pBuffer, personFaceInfo, 0, (int)dwBufSize);
+                                using (MemoryStream stream = new MemoryStream(personFaceInfo))
+                                {
+                                    try // add try catch for catch exception when the stream is not image format,and the stream is from device.
+                                    {
+                                        //Image faceImage = Image.FromStream(stream);
+                                        //pictureBox_faceimage.Image = faceImage;
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        Console.WriteLine(ex);
+                                    }
+                                }
+                            }
+                        }
+                        break;
+                    //通道报警
+                    case (uint)EM_EVENT_IVS_TYPE.SECURITYGATE_PERSONALARM:
+                        {
+                            NET_A_DEV_EVENT_SECURITYGATE_PERSONALARM_INFO info = (NET_A_DEV_EVENT_SECURITYGATE_PERSONALARM_INFO)Marshal.PtrToStructure(pEventInfo, typeof(NET_A_DEV_EVENT_SECURITYGATE_PERSONALARM_INFO));
+                            if (IntPtr.Zero != pBuffer && dwBufSize > 0)
+                            {
+                                if (info.stuImageInfo.nLength > 0)
+                                {
+                                    byte[] globalScenePicInfo = new byte[info.stuImageInfo.nLength];
+                                    Marshal.Copy(IntPtr.Add(pBuffer, (int)info.stuImageInfo.nOffSet), globalScenePicInfo, 0, (int)info.stuImageInfo.nLength);
+                                    using (MemoryStream stream = new MemoryStream(globalScenePicInfo))
+                                    {
+                                        try // add try catch for catch exception when the stream is not image format,and the stream is from device.
+                                        {
+                                            //Image globalSceneImage = Image.FromStream(stream);
+                                            //pictureBox_image.Image = globalSceneImage;
+                                        }
+                                        catch (Exception ex)
+                                        {
+                                            Console.WriteLine(ex);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        break;
+
                     default:
                         break;
                 }
             }
             return 0;
         }
-        private void UpdateFaceProperty(NET_A_DEV_EVENT_SECURITYGATE_PERSONALARM_INFO info)
+        public static void AddPersonInfo(WUserinfo personInfo)
         {
-            //this.label_time.Text = info.UTC.ToShortString();
-            //this.label_face_sex.Text = PraseSex(info.stuSecurityGateFaceInfo.emSex);
-            //if (info.stuSecurityGateFaceInfo.nAge <= 0)
-            //{
-            //    this.label_age.Text = "Unknown(未知)";
-            //}
-            //else
-            //{
-            //    this.label_age.Text = info.stuSecurityGateFaceInfo.nAge.ToString();
-            //}
-            //this.label_eye.Text = m_TextInfo.ToTitleCase(Enum.GetName(typeof(EM_EYE_STATE_TYPE), info.stuSecurityGateFaceInfo.emEye).ToLower() + PraseEye(info.stuSecurityGateFaceInfo.emEye));
-            //this.label_mouth.Text = m_TextInfo.ToTitleCase(Enum.GetName(typeof(EM_MOUTH_STATE_TYPE), info.stuSecurityGateFaceInfo.emMouth).ToLower() + PraseMouth(info.stuSecurityGateFaceInfo.emMouth));
-            //this.label_mask.Text = m_TextInfo.ToTitleCase(Enum.GetName(typeof(EM_MASK_STATE_TYPE), info.stuSecurityGateFaceInfo.emMask).ToLower() + PraseMask(info.stuSecurityGateFaceInfo.emMask));
-            //this.label_beard.Text = m_TextInfo.ToTitleCase(Enum.GetName(typeof(EM_BEARD_STATE_TYPE), info.stuSecurityGateFaceInfo.emBeard).ToLower() + PraseBeard(info.stuSecurityGateFaceInfo.emBeard));
-            //this.label_face_quality.Text = "";
+            if (IntPtr.Zero == m_LoginID)
+            {
+                MessageBox.Show("Device is offline(设备已离线)!");
+                return;
+            }
+            bool ret = false;
+
+            NET_IN_OPERATE_FACERECONGNITIONDB stuInParam = new NET_IN_OPERATE_FACERECONGNITIONDB();
+            try
+            {
+                stuInParam.dwSize = (uint)Marshal.SizeOf(typeof(NET_IN_OPERATE_FACERECONGNITIONDB));
+                stuInParam.emOperateType = EM_OPERATE_FACERECONGNITIONDB_TYPE.ADD;//operate
+                stuInParam.stPersonInfo.szPersonNameEx = personInfo.UName.Trim();
+                stuInParam.stPersonInfo.szID = personInfo.UId.Trim();
+                stuInParam.stPersonInfo.bySex = (byte)(1);
+                stuInParam.stPersonInfo.pszGroupID = Marshal.StringToHGlobalAnsi(personInfo.UStation);
+                stuInParam.stPersonInfo.bGroupIdLen = (byte)personInfo.UStation.Length;
+                stuInParam.stPersonInfo.pszGroupName = Marshal.StringToHGlobalAnsi(personInfo.UStation);
+                stuInParam.stPersonInfo.byIDType = (byte)(1);
+                stuInParam.stPersonInfo.wFacePicNum = 1;
+                byte[] data = personInfo.UPhoto;
+                stuInParam.stPersonInfo.szFacePicInfo = new NET_PIC_INFO[48];
+                for (int i = 0; i < 48; i++)
+                {
+                    stuInParam.stPersonInfo.szFacePicInfo[i] = new NET_PIC_INFO();
+                }
+                stuInParam.stPersonInfo.szFacePicInfo[0].dwFileLenth = (uint)data.Length;
+                stuInParam.stPersonInfo.szFacePicInfo[0].dwOffSet = 0;
+                stuInParam.nBufferLen = data.Length;
+                if (0 == stuInParam.nBufferLen)
+                {
+                    stuInParam.pBuffer = IntPtr.Zero;
+                }
+                else
+                {
+                    stuInParam.pBuffer = Marshal.AllocHGlobal(stuInParam.nBufferLen);
+                    Marshal.Copy(data, 0, stuInParam.pBuffer, stuInParam.nBufferLen);
+                }
+
+
+                NET_OUT_OPERATE_FACERECONGNITIONDB stuOutParam = new NET_OUT_OPERATE_FACERECONGNITIONDB();
+                stuOutParam.dwSize = (uint)Marshal.SizeOf(typeof(NET_OUT_OPERATE_FACERECONGNITIONDB));
+
+                ret = NETClient.OperateFaceRecognitionDB(m_LoginID, ref stuInParam, ref stuOutParam, m_WaitTime);
+                if (!ret)
+                {
+                    MessageBox.Show(NETClient.GetLastError());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                Marshal.FreeHGlobal(stuInParam.stPersonInfo.pszGroupID);
+                Marshal.FreeHGlobal(stuInParam.stPersonInfo.pszGroupName);
+                Marshal.FreeHGlobal(stuInParam.pBuffer);
+            }
         }
 
     }

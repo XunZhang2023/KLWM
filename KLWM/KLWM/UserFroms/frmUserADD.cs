@@ -1,4 +1,5 @@
 ﻿using KLWM.Auxiliary;
+using NPOI.OpenXmlFormats.Vml;
 using ProcessControlSystem;
 using System;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -103,7 +105,8 @@ namespace KLWM.UserFroms
                 {
                     DbContext.MySql.Insert<WUserinfo>().AppendData(wUserinfoNew).ExecuteAffrows();
                 }
-                
+                //大华人脸库添加
+                DaHuaHelper.AddPersonInfo(wUserinfoNew);
                 MessageBox.Show("数据保存成功！");
             }
             catch (Exception ex)
@@ -111,6 +114,8 @@ namespace KLWM.UserFroms
                 MessageBox.Show(ex.Message);
                 return;
             }
+            
+
         }
 
     }

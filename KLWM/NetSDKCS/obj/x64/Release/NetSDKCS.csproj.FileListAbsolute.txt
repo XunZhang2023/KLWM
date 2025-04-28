@@ -10,3 +10,9 @@ D:\华崛\01仓库管理\git\KLWM\KLWM\NetSDKCS\obj\x64\Release\NetSDKCS.csproj.
 D:\华崛\01仓库管理\git\KLWM\KLWM\NetSDKCS\obj\x64\Release\NetSDKCS.csproj.CoreCompileInputs.cache
 D:\华崛\01仓库管理\git\KLWM\KLWM\NetSDKCS\obj\x64\Release\NetSDKCS.dll
 D:\华崛\01仓库管理\git\KLWM\KLWM\NetSDKCS\obj\x64\Release\NetSDKCS.pdb
+D:\盛世沛金\02项目\2025\05远程仓库升级\git\KLWM\KLWM\NetSDKCS\bin\x64\Release\NetSDKCS.dll
+D:\盛世沛金\02项目\2025\05远程仓库升级\git\KLWM\KLWM\NetSDKCS\bin\x64\Release\NetSDKCS.pdb
+D:\盛世沛金\02项目\2025\05远程仓库升级\git\KLWM\KLWM\NetSDKCS\obj\x64\Release\NetSDKCS.csproj.AssemblyReference.cache
+D:\盛世沛金\02项目\2025\05远程仓库升级\git\KLWM\KLWM\NetSDKCS\obj\x64\Release\NetSDKCS.csproj.CoreCompileInputs.cache
+D:\盛世沛金\02项目\2025\05远程仓库升级\git\KLWM\KLWM\NetSDKCS\obj\x64\Release\NetSDKCS.dll
+D:\盛世沛金\02项目\2025\05远程仓库升级\git\KLWM\KLWM\NetSDKCS\obj\x64\Release\NetSDKCS.pdb

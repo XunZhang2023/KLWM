@@ -45,6 +45,11 @@ namespace KLWM.Auxiliary
             };
             OnRspUserInfoChange?.Invoke(userContext);
         }
+        public delegate void RspCameraDataChange(int _InOrOut , string _ProductNo);
+        /// <summary>
+        /// 摄像头出入库事件
+        /// </summary>
+        public static event RspCameraDataChange OnRspCameraDataChange;
         public delegate void RspKanbanDataInChange();
         /// <summary>
         /// 看板入库
@@ -79,14 +84,21 @@ namespace KLWM.Auxiliary
         }
         public static void OnPeopleFaceChange(NET_DEV_EVENT_FACERECOGNITION_INFO info)
         {
-            UserInfoStruct userInfoStruct = new UserInfoStruct();
+            //UserInfoStruct userInfoStruct = new UserInfoStruct();
             var candidatesInfo = info.stuCandidates.ToList().OrderByDescending(p => p.bySimilarity).ToArray();
             NET_CANDIDATE_INFO maxSimilarityPersonInfo = candidatesInfo[0];
 
-            userInfoStruct.Uid = maxSimilarityPersonInfo.stPersonInfo.szUID;
-            userInfoStruct.Uname = maxSimilarityPersonInfo.stPersonInfo.szPersonName;
+            wUserinfo.Uid = maxSimilarityPersonInfo.stPersonInfo.szUID;
+            wUserinfo.Uname = maxSimilarityPersonInfo.stPersonInfo.szPersonName;
 
-            OnRspUserInfoChange?.Invoke(userInfoStruct);
+            //使用属性值改变事件触发
+            //userInfoStruct.Uid = maxSimilarityPersonInfo.stPersonInfo.szUID;
+            //userInfoStruct.Uname = maxSimilarityPersonInfo.stPersonInfo.szPersonName;
+            //OnRspUserInfoChange?.Invoke(userInfoStruct);
+        }
+        public static void OnCameraDataChange(int _InOrOut, string _ProductNo)
+        {
+            OnRspCameraDataChange?.Invoke(_InOrOut, _ProductNo);
         }
     }
 }

@@ -44,6 +44,7 @@
             this.WMcheck = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.fluentFormDefaultManager1 = new DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager(this.components);
+            this.CameraLog = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).BeginInit();
@@ -117,6 +118,7 @@
             // WarehouseManagement
             // 
             this.WarehouseManagement.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.CameraLog,
             this.Storage,
             this.EXwarehouse});
             this.WarehouseManagement.Expanded = true;
@@ -175,6 +177,13 @@
             // 
             this.fluentFormDefaultManager1.Form = this;
             // 
+            // CameraLog
+            // 
+            this.CameraLog.Name = "CameraLog";
+            this.CameraLog.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.CameraLog.Tag = "相机识别";
+            this.CameraLog.Text = "相机识别";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
@@ -213,6 +222,7 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement WMcheck;
         private DevExpress.XtraBars.Navigation.AccordionControlElement KanBanInfo;
         private DevExpress.XtraBars.Navigation.AccordionControlElement PeopleManager;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement CameraLog;
     }
 }
 
