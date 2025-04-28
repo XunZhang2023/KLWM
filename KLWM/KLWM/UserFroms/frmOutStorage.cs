@@ -84,7 +84,7 @@ namespace KLWM.UserFroms
                 {
                     this.tbxNo.Text = barcode;
                     frmCount frmCount = new frmCount();
-                    frmCount.ShowDialog();
+                    frmCount.Show();
                 }));
             }
         }

@@ -36,10 +36,8 @@ namespace KLWM.UserFroms
             Image originalImage;
             if (wUserinfo != null) 
             {
-                using (MemoryStream ms = new MemoryStream(wUserinfo.UPhoto))
-                {
-                    originalImage = Image.FromStream(ms);
-                }
+                //图片缩放
+                originalImage = ImgHelper.CreateThumbnail(wUserinfo.UPhoto, 280, 330);
                 Invoke(new Action(() =>
                 {
                     this.lblName.Text = wUserinfo.UName;
@@ -53,6 +51,7 @@ namespace KLWM.UserFroms
         private void InitData()
         {
             GetStoreDataToday();
+            //DaHuaHelper.Realplay(this.pictureBox1.Handle);
         }
         private void StaticDelegates_OnRspKanbanDataInChange()
         {
@@ -112,7 +111,7 @@ namespace KLWM.UserFroms
         private void btnInStore_Click(object sender, EventArgs e)
         {
             frmInStorage frmInStorage = new frmInStorage();
-            frmInStorage.ShowDialog();
+            frmInStorage.Show();
         }
 
         private void btnOutStore_Click(object sender, EventArgs e)

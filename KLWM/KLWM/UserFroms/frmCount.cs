@@ -13,10 +13,12 @@ namespace KLWM.UserFroms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Double setCount = default(Double);
-            setCount = Convert.ToDouble(this.numericUpDown1.Value);
-            StaticDelegates.SetInOrOutCount(setCount);
-            this.Close();
+            Invoke(new Action(() => {
+                Double setCount = default(Double);
+                setCount = Convert.ToDouble(this.numericUpDown1.Value);
+                StaticDelegates.SetInOrOutCount(setCount);
+                this.Close();
+            }));
         }
     }
 }

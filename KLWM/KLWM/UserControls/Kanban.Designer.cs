@@ -147,7 +147,7 @@ namespace KLWM.UserFroms
             // lblStation
             // 
             this.lblStation.AutoSize = true;
-            this.lblStation.Location = new System.Drawing.Point(301, 435);
+            this.lblStation.Location = new System.Drawing.Point(302, 397);
             this.lblStation.Name = "lblStation";
             this.lblStation.Size = new System.Drawing.Size(15, 15);
             this.lblStation.TabIndex = 4;
@@ -156,7 +156,7 @@ namespace KLWM.UserFroms
             // lblNo
             // 
             this.lblNo.AutoSize = true;
-            this.lblNo.Location = new System.Drawing.Point(301, 397);
+            this.lblNo.Location = new System.Drawing.Point(302, 339);
             this.lblNo.Name = "lblNo";
             this.lblNo.Size = new System.Drawing.Size(15, 15);
             this.lblNo.TabIndex = 4;
@@ -165,7 +165,7 @@ namespace KLWM.UserFroms
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(301, 354);
+            this.lblName.Location = new System.Drawing.Point(302, 286);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(15, 15);
             this.lblName.TabIndex = 3;
@@ -174,7 +174,7 @@ namespace KLWM.UserFroms
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(230, 439);
+            this.label3.Location = new System.Drawing.Point(231, 397);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 15);
             this.label3.TabIndex = 4;
@@ -183,7 +183,7 @@ namespace KLWM.UserFroms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(230, 397);
+            this.label1.Location = new System.Drawing.Point(231, 339);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 15);
             this.label1.TabIndex = 4;
@@ -192,7 +192,7 @@ namespace KLWM.UserFroms
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(230, 354);
+            this.label2.Location = new System.Drawing.Point(231, 286);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 15);
             this.label2.TabIndex = 3;
@@ -200,7 +200,7 @@ namespace KLWM.UserFroms
             // 
             // btnOutStore
             // 
-            this.btnOutStore.Location = new System.Drawing.Point(323, 488);
+            this.btnOutStore.Location = new System.Drawing.Point(342, 453);
             this.btnOutStore.Name = "btnOutStore";
             this.btnOutStore.Size = new System.Drawing.Size(97, 46);
             this.btnOutStore.TabIndex = 1;
@@ -211,15 +211,15 @@ namespace KLWM.UserFroms
             // pbxPeople
             // 
             this.pbxPeople.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.pbxPeople.Location = new System.Drawing.Point(6, 354);
+            this.pbxPeople.Location = new System.Drawing.Point(6, 269);
             this.pbxPeople.Name = "pbxPeople";
-            this.pbxPeople.Size = new System.Drawing.Size(193, 180);
+            this.pbxPeople.Size = new System.Drawing.Size(212, 230);
             this.pbxPeople.TabIndex = 1;
             this.pbxPeople.TabStop = false;
             // 
             // btnInStore
             // 
-            this.btnInStore.Location = new System.Drawing.Point(214, 488);
+            this.btnInStore.Location = new System.Drawing.Point(234, 453);
             this.btnInStore.Name = "btnInStore";
             this.btnInStore.Size = new System.Drawing.Size(97, 46);
             this.btnInStore.TabIndex = 0;
@@ -232,7 +232,7 @@ namespace KLWM.UserFroms
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox1.Location = new System.Drawing.Point(6, 24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(414, 297);
+            this.pictureBox1.Size = new System.Drawing.Size(433, 239);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -569,9 +569,6 @@ namespace KLWM.UserFroms
             ((System.ComponentModel.ISupportInitialize)(this.dgvinstore)).EndInit();
             this.ResumeLayout(false);
 
-            this.dgvinstore.AutoGenerateColumns = false;
-            this.dgvoutstore.AutoGenerateColumns = false;
-            this.dgvstore.AutoGenerateColumns = false;
         }
 
         #endregion

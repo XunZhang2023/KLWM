@@ -1,4 +1,5 @@
-﻿using NetSDKCS;
+﻿using DevExpress.XtraEditors.Filtering;
+using NetSDKCS;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -31,10 +32,10 @@ namespace KLWM.Auxiliary
         private static int m_GroupID = 0;
         private static TextInfo m_TextInfo = Thread.CurrentThread.CurrentCulture.TextInfo;
 
-        private static string _ip;
-        private static ushort _port;
-        private static string _username;
-        private static string _password;
+        private static string _ip="192.168.1.109";
+        private static ushort _port=37777;
+        private static string _username="admin";
+        private static string _password="Pass@123";
 
         public static event Action DeviceDisconnected;
         private static void OnDeviceDisconnected()
@@ -48,7 +49,7 @@ namespace KLWM.Auxiliary
         /// 初始化SDK
         /// </summary>
         /// <returns></returns>
-        private static bool InitSDK()
+        public static bool InitSDK()
         {
             m_DisConnectCallBack += DisConnectCallBack;
             m_AnalyzerDataCallBack += AnalyzerDataCallBack;
@@ -107,6 +108,40 @@ namespace KLWM.Auxiliary
 
             }
         }
+        public static void Realplay(IntPtr handle)
+        {
+            if (m_PlayID == IntPtr.Zero)
+            {
+                m_PlayID = NETClient.RealPlay(m_LoginID,0,handle);
+                if (IntPtr.Zero == m_PlayID)
+                {
+                    MessageBox.Show(NETClient.GetLastError());
+                    return;
+                }
+                bool res = NETClient.RenderPrivateData(m_PlayID, true);
+                if (!res)
+                {
+                    MessageBox.Show(NETClient.GetLastError());
+                    return;
+                }
+            }
+            else
+            {
+                bool ret = NETClient.RenderPrivateData(m_PlayID, false);
+                if (!ret)
+                {
+                    MessageBox.Show(NETClient.GetLastError());
+                    return;
+                }
+                ret = NETClient.StopRealPlay(m_PlayID);
+                if (!ret)
+                {
+                    MessageBox.Show(NETClient.GetLastError());
+                    return;
+                }
+                m_PlayID = IntPtr.Zero;
+            }
+        }
         /// <summary>
         /// 订阅事件
         /// </summary>
@@ -114,7 +149,7 @@ namespace KLWM.Auxiliary
         {
             if (IntPtr.Zero == m_AnalyzerID)
             {
-                m_AnalyzerID = NETClient.RealLoadPicture(m_LoginID, 1, (uint)EM_EVENT_IVS_TYPE.ALL, true, m_AnalyzerDataCallBack, IntPtr.Zero, IntPtr.Zero);
+                m_AnalyzerID = NETClient.RealLoadPicture(m_LoginID, 0, (uint)EM_EVENT_IVS_TYPE.ALL, true, m_AnalyzerDataCallBack, IntPtr.Zero, IntPtr.Zero);
                 if (IntPtr.Zero == m_AnalyzerID)
                 {
                     MessageBox.Show(NETClient.GetLastError());
@@ -179,69 +214,85 @@ namespace KLWM.Auxiliary
             {
                 switch (dwEventType)
                 {
-                    case (uint)EM_EVENT_IVS_TYPE.SECURITYGATE_PERSONALARM:
+                    case (uint)EM_EVENT_IVS_TYPE.FACERECOGNITION:
                         {
-                            NET_A_DEV_EVENT_SECURITYGATE_PERSONALARM_INFO info = (NET_A_DEV_EVENT_SECURITYGATE_PERSONALARM_INFO)Marshal.PtrToStructure(pEventInfo, typeof(NET_A_DEV_EVENT_SECURITYGATE_PERSONALARM_INFO));
+                            NET_DEV_EVENT_FACERECOGNITION_INFO info = (NET_DEV_EVENT_FACERECOGNITION_INFO)Marshal.PtrToStructure(pEventInfo, typeof(NET_DEV_EVENT_FACERECOGNITION_INFO));
                             if (IntPtr.Zero != pBuffer && dwBufSize > 0)
                             {
-                                if (info.stuImageInfo.nLength > 0)
+                                if (info.bGlobalScenePic)
                                 {
-                                    byte[] globalScenePicInfo = new byte[info.stuImageInfo.nLength];
-                                    Marshal.Copy(IntPtr.Add(pBuffer, (int)info.stuImageInfo.nOffSet), globalScenePicInfo, 0, (int)info.stuImageInfo.nLength);
-                                    using (MemoryStream stream = new MemoryStream(globalScenePicInfo))
+                                    if (info.stuGlobalScenePicInfo.dwFileLenth > 0)
                                     {
-                                        try // add try catch for catch exception when the stream is not image format,and the stream is from device.
+                                        byte[] globalScenePicInfo = new byte[info.stuGlobalScenePicInfo.dwFileLenth];
+                                        Marshal.Copy(IntPtr.Add(pBuffer, (int)info.stuGlobalScenePicInfo.dwOffSet), globalScenePicInfo, 0, (int)info.stuGlobalScenePicInfo.dwFileLenth);
+                                        using (MemoryStream stream = new MemoryStream(globalScenePicInfo))
                                         {
-                                            //Image globalSceneImage = Image.FromStream(stream);
-                                            //pictureBox_image.Image = globalSceneImage;
-                                            StaticDelegates.OnPeopleFaceChange(info);///20250417
-                                        }
-                                        catch (Exception ex)
-                                        {
-                                            Console.WriteLine(ex);
+                                            try // add try catch for catch exception when the stream is not image format,and the stream is from device.
+                                            {
+                                                StaticDelegates.OnPeopleFaceChange(info);///20250417
+                                            }
+                                            catch (Exception ex)
+                                            {
+                                                Console.WriteLine(ex);
+                                            }
                                         }
                                     }
-                                }
-
-                                if (info.stuFaceImageInfo.nLength > 0)
-                                {
-                                    byte[] personFaceInfo = new byte[info.stuFaceImageInfo.nLength];
-                                    Marshal.Copy(IntPtr.Add(pBuffer, (int)info.stuFaceImageInfo.nOffSet), personFaceInfo, 0, (int)info.stuFaceImageInfo.nLength);
-                                    using (MemoryStream stream = new MemoryStream(personFaceInfo))
-                                    {
-                                        try // add try catch for catch exception when the stream is not image format,and the stream is from device.
-                                        {
-                                            //Image faceImage = Image.FromStream(stream);
-                                            //pictureBox_faceimage.Image = faceImage;
-
-                                            StaticDelegates.OnPeopleFaceChange(info);///20250417
-                                        }
-                                        catch (Exception ex)
-                                        {
-                                            Console.WriteLine(ex);
-                                        }
-                                    }
-                                    //this.BeginInvoke(new Action<NET_A_DEV_EVENT_SECURITYGATE_PERSONALARM_INFO>(UpdateFaceProperty), info);
-
-                                    StaticDelegates.OnPeopleFaceChange(info);///20250417
-                                }
-
-                                if (info.nCandidateNum > 0)
-                                {
-                                    var candidatesInfo = info.stuCandidates.ToList().OrderByDescending(p => p.nSimilarity).ToArray();
-                                    NET_SECURITYGATE_CANDIDATE maxSimilarityPersonInfo = candidatesInfo[0];
-                                    string groupID = maxSimilarityPersonInfo.stuPerson.szGroupID;
-                                    string groupName = "";
-                                    StaticDelegates.OnPeopleFaceChange(info);///20250417
-                                    //this.BeginInvoke(new Action<NET_SECURITYGATE_CANDIDATE, string, string>(UpdateCandidateProperty), maxSimilarityPersonInfo, groupID, groupName);
                                 }
                                 else
                                 {
+                                    //clear
                                     StaticDelegates.OnPeopleFaceChange(info);///20250417
                                 }
+                                #region 临时屏蔽
+                                //if (info.stuObject.stPicInfo.dwFileLenth > 0)
+                                //{
+                                //    byte[] personFaceInfo = new byte[info.stuObject.stPicInfo.dwFileLenth];
+                                //    Marshal.Copy(IntPtr.Add(pBuffer, (int)info.stuObject.stPicInfo.dwOffSet), personFaceInfo, 0, (int)info.stuObject.stPicInfo.dwFileLenth);
+                                //    using (MemoryStream stream = new MemoryStream(personFaceInfo))
+                                //    {
+                                //        try // add try catch for catch exception when the stream is not image format,and the stream is from device.
+                                //        {
+                                //            StaticDelegates.OnPeopleFaceChange(info);///20250417
+                                //        }
+                                //        catch (Exception ex)
+                                //        {
+                                //            Console.WriteLine(ex);
+                                //        }
+                                //    }
+                                //}
+                                //if (info.nCandidateNum > 0)
+                                //{
+                                //    var candidatesInfo = info.stuCandidates.ToList().OrderByDescending(p => p.bySimilarity).ToArray();
+                                //    NET_CANDIDATE_INFO maxSimilarityPersonInfo = candidatesInfo[0];
+                                //    if (maxSimilarityPersonInfo.stPersonInfo.szFacePicInfo[0].dwFileLenth > 0)
+                                //    {
+                                //        byte[] candidateInfo = new byte[maxSimilarityPersonInfo.stPersonInfo.szFacePicInfo[0].dwFileLenth];
+                                //        Marshal.Copy(IntPtr.Add(pBuffer, (int)maxSimilarityPersonInfo.stPersonInfo.szFacePicInfo[0].dwOffSet), candidateInfo, 0, (int)maxSimilarityPersonInfo.stPersonInfo.szFacePicInfo[0].dwFileLenth);
+                                //        using (MemoryStream stream = new MemoryStream(candidateInfo))
+                                //        {
+                                //            try // add try catch for catch exception when the stream is not image format,and the stream is from device.
+                                //            {
+                                //                StaticDelegates.OnPeopleFaceChange(info);///20250417
+                                //            }
+                                //            catch (Exception ex)
+                                //            {
+                                //                Console.WriteLine(ex);
+                                //            }
+                                //        }
+                                //        string groupID = Marshal.PtrToStringAnsi(maxSimilarityPersonInfo.stPersonInfo.pszGroupID);
+                                //        string groupName = Marshal.PtrToStringAnsi(maxSimilarityPersonInfo.stPersonInfo.pszGroupName);
+                                //    }
+                                //}
+                                //else
+                                //{
+
+                                //    StaticDelegates.OnPeopleFaceChange(info);///20250417
+                                //}
+                                #endregion
                             }
                         }
                         break;
+                   
                     default:
                         break;
                 }

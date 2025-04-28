@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraBars;
+﻿using DevExpress.Utils;
+using DevExpress.XtraBars;
 using DevExpress.XtraBars.Navigation;
 using KLWM.Auxiliary;
 using KLWM.UserControls;
@@ -28,6 +29,12 @@ namespace KLWM
         {
             InitializeComponent();
             this.Load += FrmMain_Load;
+            this.FormClosed += FrmMain_FormClosed;
+        }
+
+        private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ScanDriverContext.driver.CloseSerialPort();
         }
 
         private void FrmMain_Load(object sender, EventArgs e)

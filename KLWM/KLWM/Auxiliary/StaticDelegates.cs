@@ -77,14 +77,14 @@ namespace KLWM.Auxiliary
         {
             OnRspKanbanDataOutChange?.Invoke();
         }
-        public static void OnPeopleFaceChange(NET_A_DEV_EVENT_SECURITYGATE_PERSONALARM_INFO info)
+        public static void OnPeopleFaceChange(NET_DEV_EVENT_FACERECOGNITION_INFO info)
         {
             UserInfoStruct userInfoStruct = new UserInfoStruct();
-            var candidatesInfo = info.stuCandidates.ToList().OrderByDescending(p => p.nSimilarity).ToArray();
-            NET_SECURITYGATE_CANDIDATE maxSimilarityPersonInfo = candidatesInfo[0];
+            var candidatesInfo = info.stuCandidates.ToList().OrderByDescending(p => p.bySimilarity).ToArray();
+            NET_CANDIDATE_INFO maxSimilarityPersonInfo = candidatesInfo[0];
 
-            userInfoStruct.Uid = maxSimilarityPersonInfo.stuPerson.szGroupID;
-            userInfoStruct.Uname = maxSimilarityPersonInfo.stuPerson.szPersonName;
+            userInfoStruct.Uid = maxSimilarityPersonInfo.stPersonInfo.szUID;
+            userInfoStruct.Uname = maxSimilarityPersonInfo.stPersonInfo.szPersonName;
 
             OnRspUserInfoChange?.Invoke(userInfoStruct);
         }

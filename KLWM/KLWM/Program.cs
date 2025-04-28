@@ -18,9 +18,12 @@ namespace KLWM
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            ScanDriverContext.InitScanDriver();
-            Application.Run(new frmMain());
+            Application.SetCompatibleTextRenderingDefault(false); 
+            //ScanDriverContext.InitScanDriver();
+            //DaHuaHelper.InitSDK();
+            //DaHuaHelper.Login();
+            //DaHuaHelper.AttachEvent();
+            Application.Run(new frmMain()); 
         }
     }
 }

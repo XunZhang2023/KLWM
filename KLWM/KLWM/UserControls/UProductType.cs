@@ -6,6 +6,7 @@ using ProcessControlSystem;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.IO;
@@ -15,36 +16,42 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrainLoadingRefactor.DataCore.DataModel;
-using WinSDKDemo_ZPL;
+using WinSDKDemo_CPCL;
+using static DevExpress.XtraPrinting.Native.ExportOptionsPropertiesNames;
 
 namespace KLWM.UserControls
 {
     public partial class UProductType : UserControl
     {
         List<WProductInfo> wProductInfos = new List<WProductInfo>();
+
+        int _enlarge = Convert.ToInt32(ConfigurationManager.AppSettings["Enlarge"]);
+        string _companyName = ConfigurationManager.AppSettings["CompanyName"];
+        int _xPos = Convert.ToInt32(ConfigurationManager.AppSettings["XPos"]);
+        int _yPos = Convert.ToInt32(ConfigurationManager.AppSettings["YPos"]);
+
+
         IntPtr printer;
+        int openStatus = 100;
         bool isOpen = false;
         public UProductType()
         {
             InitializeComponent();
-            InitData(); 
-           // ZPLPrint.PrinterCreator(ref printer, "");
+            InitData();
             dgvProductType.AutoGenerateColumns = false;
-            //OpenPrint();
+            printer = CPCLPrint.InitPrinter("");
+            OpenPrint();
         }
-
         private void OpenPrint()
         {
-            if (isOpen)
+            if (openStatus == 0)
             {
-                ZPLPrint.ClosePort(printer);
+                CPCLPrint.ClosePort(printer);
             }
             string info = "";
-            info = "USB," + "";
-            isOpen = ZPLPrint.OpenPort(printer, info) == 0;
-
+            info = "USB," + "USB001";
+            openStatus = CPCLPrint.OpenPort(printer, "USB,");
         }
-
         public void InitData()
         {
             List<string> cbxStr1 = new List<string>();
@@ -63,18 +70,15 @@ namespace KLWM.UserControls
             cbxPManufacturer.DisplayMember = "PManufacturer";
             cbxPManufacturer.SelectedIndex = 0;
         }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             frmProductADD frmProductADD = new frmProductADD();
             frmProductADD.ShowDialog();
         }
-
         private void btnSel_Click(object sender, EventArgs e)
         {
             GetProduteInfo();
         }
-
         private void btnDel_Click(object sender, EventArgs e)
         {
             if (dgvProductType.CurrentRow == null)
@@ -90,8 +94,6 @@ namespace KLWM.UserControls
             DbContext.MySql.Update<WProductInfo>().SetSource(wProductInfo).ExecuteAffrows();
             GetProduteInfo();
         }
-
-
         private void btnExport_Click(object sender, EventArgs e)
         {
             try
@@ -112,7 +114,6 @@ namespace KLWM.UserControls
                 return;
             }
         }
-
         private void dgvProductType_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (!(dgvProductType.CurrentRow.DataBoundItem is WProductInfo wProductInfo))
@@ -130,19 +131,26 @@ namespace KLWM.UserControls
         /// <param name="wProductInfo"></param>
         private void LabPrint(WProductInfo wProductInfo)
         {
-            //打印
-            ZPLPrint.ZPL_StartFormat(printer);
-            ZPLPrint.ZPL_Text(printer, 50, 50, 12, 0, 15, 12, "类别: ");//类别
-            ZPLPrint.ZPL_Text(printer, 80, 45, 12, 0, 15, 12, wProductInfo.Ptype);//类别
-            ZPLPrint.ZPL_GraphicBox(printer, 120, 50, 300, 2, 2, 0);//下划线
-            ZPLPrint.ZPL_Text(printer, 50, 120, 12, 0, 15, 12, "型号: ");//型号
-            ZPLPrint.ZPL_Text(printer, 80, 115, 12, 0, 15, 12, wProductInfo.PSize);//型号
-            ZPLPrint.ZPL_GraphicBox(printer, 120, 120, 300, 2, 2, 0);//下划线
-            ZPLPrint.ZPL_Text(printer, 50, 190, 12, 0, 15, 12, "厂商:");//厂商
-            ZPLPrint.ZPL_Text(printer, 80, 185, 12, 0, 15, 12, wProductInfo.PManufacturer);//厂商
-            ZPLPrint.ZPL_GraphicBox(printer, 120, 190, 300, 2, 2, 0);//下划线
-            ZPLPrint.ZPL_BarCode128(printer, 80, 210, 0, 5, 150, 'Y', 'N', 'N', 'A', wProductInfo.PNo);//条码
-            ZPLPrint.ZPL_EndFormat(printer);
+            CPCLPrint.CPCL_AddLabel(printer, 0, 500 , 1);
+            CPCLPrint.CPCL_SetAlign(printer, 0);
+            CPCLPrint.CPCL_AddText(printer, 0, "4", 7, _xPos, _yPos, "类别:");
+            CPCLPrint.CPCL_AddText(printer, 0, "4", 7, (_xPos+100), _yPos , wProductInfo.Ptype);
+            CPCLPrint.CPCL_AddLine(printer, (_xPos+80) , (_yPos+40) , (_xPos+540) , (_yPos+40) , 1);
+
+            CPCLPrint.CPCL_AddText(printer, 0, "4", 7, _xPos , (_yPos+80) , "型号:");
+            CPCLPrint.CPCL_AddText(printer, 0, "4", 7, (_xPos+100) , (_yPos+80) , wProductInfo.PSize);
+            CPCLPrint.CPCL_AddLine(printer, (_xPos + 80) , (_yPos+120) , (_xPos + 540) , (_yPos + 120) , 1);
+
+            CPCLPrint.CPCL_AddText(printer, 0, "4", 7, _xPos , (_yPos + 160) , "厂商:");
+            CPCLPrint.CPCL_AddText(printer, 0, "4", 7, (_xPos + 100) , (_yPos + 160) , wProductInfo.PManufacturer);
+            CPCLPrint.CPCL_AddLine(printer, (_xPos + 80) , (_yPos + 200) , (_xPos + 540) , (_yPos + 200) , 1);
+
+            CPCLPrint.CPCL_AddBarCodeText(printer, 1, 8, 4, 0);
+            CPCLPrint.CPCL_AddBarCode(printer, 0, 20, 2, 10, 80, (_xPos + 40) , (_yPos + 230) , wProductInfo.PNo);
+
+            CPCLPrint.CPCL_AddText(printer, 0, "4", 2, _xPos , (_yPos + 360) , _companyName);
+            CPCLPrint.CPCL_Print(printer);
+
         }
 
         private void GetProduteInfo()

@@ -1,4 +1,5 @@
 ﻿using KLWM.Auxiliary;
+using RJCP.IO.Ports;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -25,12 +26,15 @@ namespace ProcessControlSystem
         public static TData InitScanDriver()
         {
             string port = ConfigurationManager.AppSettings["Comport"];
-            int bps = Convert.ToUInt16(ConfigurationManager.AppSettings["Bps"]);
+            int bps = Convert.ToInt32(ConfigurationManager.AppSettings["Bps"]);
             try
             {
-                if (!driver.Connection(port,bps))
+                if (!driver.Connection(port,9600))
                 {
-                    MessageBox.Show("扫码枪连接失败！请正确连接扫码枪！");
+                    if (!driver.Connection(port, 115200))
+                    {
+                        MessageBox.Show("扫码枪连接失败！请正确连接扫码枪！");
+                    }
                 }
                 //return new TData() { Success = false, ExceptionMessage = item.Comport + "连接失败！" };
                 driver.OnRspBarcode += Driver_OnRspBarcode;
@@ -38,7 +42,13 @@ namespace ProcessControlSystem
             }
             catch (Exception ex)
             {
-                return new TData() { Success = false, ExceptionMessage = ex.Message };
+                if (!driver.Connection(port, 115200))
+                {
+                    MessageBox.Show("扫码枪连接失败！请正确连接扫码枪！");
+                }
+                //return new TData() { Success = false, ExceptionMessage = item.Comport + "连接失败！" };
+                driver.OnRspBarcode += Driver_OnRspBarcode;
+                return new TData() { Success = true };
             }
             
         }
