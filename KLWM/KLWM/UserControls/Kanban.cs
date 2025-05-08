@@ -28,10 +28,13 @@ namespace KLWM.UserFroms
             StaticDelegates.OnRspKanbanDataInChange += StaticDelegates_OnRspKanbanDataInChange;
             StaticDelegates.OnRspKanbanDataOutChange += StaticDelegates_OnRspKanbanDataOutChange;
             StaticDelegates.OnRspUserInfoChange += StaticDelegates_OnRspUserInfoChange;
-
             StaticDelegates.OnRspCameraDataChange += StaticDelegates_OnRspCameraDataChange;
         }
-
+        /// <summary>
+        /// 相机触发
+        /// </summary>
+        /// <param name="_InOrOut"></param>
+        /// <param name="_ProductNo"></param>
         private void StaticDelegates_OnRspCameraDataChange(int _InOrOut, string _ProductNo)
         {
             WCameraLog wCameraLog = DbContext.MySql.Select<WCameraLog>().Where(s => s.IsOutbound == 0
@@ -56,13 +59,19 @@ namespace KLWM.UserFroms
 
             }
         }
-
+        /// <summary>
+        /// 初始化
+        /// </summary>
         private void InitData()
         {
             GetStoresDataToday();
             GetCameraLogToday();
             //DaHuaHelper.Realplay(this.pbxReal.Handle);
         }
+        /// <summary>
+        /// 用户触发
+        /// </summary>
+        /// <param name="userContext"></param>
         private void StaticDelegates_OnRspUserInfoChange(UserInfoStruct userContext)
         {
             try
@@ -115,10 +124,16 @@ namespace KLWM.UserFroms
                 return;
             }
         }
+        /// <summary>
+        /// 入库触发
+        /// </summary>
         private void StaticDelegates_OnRspKanbanDataInChange()
         {
             GetStoresDataToday(); GetCameraLogToday();
         }
+        /// <summary>
+        /// 出库触发
+        /// </summary>
         private void StaticDelegates_OnRspKanbanDataOutChange()
         {
             GetStoresDataToday(); GetCameraLogToday();
@@ -141,6 +156,7 @@ namespace KLWM.UserFroms
             BindingList<Storechange> bwStoresList = new BindingList<Storechange>(wStores);
             dgvstore.DataSource = bwStoresList;
         }
+        #region 出入库屏蔽
         ///// <summary>
         ///// 获取今日入库
         ///// </summary>
@@ -159,16 +175,32 @@ namespace KLWM.UserFroms
         //    BindingList<WOutstore> bwOutStoresList = new BindingList<WOutstore>(wOutStores);
         //    dgvoutstore.DataSource = bwOutStoresList;
         //}
+        #endregion
+        /// <summary>
+        /// 入库
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnInStore_Click(object sender, EventArgs e)
         {
             frmInStorage frmInStorage = new frmInStorage();
             frmInStorage.ShowDialog();
         }
+        /// <summary>
+        /// 出库
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnOutStore_Click(object sender, EventArgs e)
         {
             frmOutStorage frmOutStorage = new frmOutStorage();
             frmOutStorage.ShowDialog();
         }
+        /// <summary>
+        /// 判断状态显示红色
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dgvstore_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (e.Value == null)
@@ -178,6 +210,20 @@ namespace KLWM.UserFroms
                 e.CellStyle.ForeColor = Color.Red;
             }
 
+        }
+        /// <summary>
+        /// 判断状态显示红色
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void dgvCameraHis_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.Value == null)
+                return;
+            if (dgvstore.Columns[e.ColumnIndex].Name == "IsOutbound" && Double.Parse(e.Value.ToString()) < 1)
+            {
+                e.CellStyle.ForeColor = Color.Red;
+            }
         }
     }
 }

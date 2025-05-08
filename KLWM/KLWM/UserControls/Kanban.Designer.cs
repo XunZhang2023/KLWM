@@ -33,8 +33,6 @@ namespace KLWM.UserFroms
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Beige;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Bisque;
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -60,6 +58,7 @@ namespace KLWM.UserFroms
             this.CTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvCameraHis = new System.Windows.Forms.DataGridView();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Uname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,7 +69,6 @@ namespace KLWM.UserFroms
             this.OutPhoto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IsOutbound = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OutboundInfo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -343,8 +341,8 @@ namespace KLWM.UserFroms
             // 
             // dgvCameraHis
             // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Beige;
             this.dgvCameraHis.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvCameraHis.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCameraHis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCameraHis.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
@@ -361,9 +359,12 @@ namespace KLWM.UserFroms
             this.dgvCameraHis.Location = new System.Drawing.Point(0, 0);
             this.dgvCameraHis.Name = "dgvCameraHis";
             this.dgvCameraHis.RowHeadersWidth = 51;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Bisque;
+            this.dgvCameraHis.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCameraHis.RowTemplate.Height = 27;
             this.dgvCameraHis.Size = new System.Drawing.Size(1438, 405);
             this.dgvCameraHis.TabIndex = 0;
+            this.dgvCameraHis.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvCameraHis_CellFormatting);
             // 
             // Id
             // 
@@ -442,7 +443,7 @@ namespace KLWM.UserFroms
             this.IsOutbound.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.IsOutbound.DataPropertyName = "IsOutbound";
             this.IsOutbound.FillWeight = 10F;
-            this.IsOutbound.HeaderText = "是否出库";
+            this.IsOutbound.HeaderText = "出库状态";
             this.IsOutbound.MinimumWidth = 6;
             this.IsOutbound.Name = "IsOutbound";
             // 
@@ -473,9 +474,9 @@ namespace KLWM.UserFroms
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCameraHis)).EndInit();
             this.ResumeLayout(false);
+
             this.dgvstore.AutoGenerateColumns = false;
             this.dgvCameraHis.AutoGenerateColumns = false;
-
         }
 
         #endregion
