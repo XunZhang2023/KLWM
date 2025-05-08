@@ -91,7 +91,7 @@ namespace KLWM.UserFroms
                     UStation = tbxStation.Text,
                     UName = tbxUName.Text,
                     UPhoto = byData,
-                     UId = tbxUId.Text,
+                    UId = tbxUId.Text,
                     ValidFlag = 1,
                     CTime = DateTime.Now
                 };
