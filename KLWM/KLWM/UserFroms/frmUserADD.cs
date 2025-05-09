@@ -114,9 +114,6 @@ namespace KLWM.UserFroms
                 MessageBox.Show(ex.Message);
                 return;
             }
-            
-
         }
-
     }
 }
