@@ -25,10 +25,12 @@ namespace KLWM.UserControls
     {
         List<WProductInfo> wProductInfos = new List<WProductInfo>();
 
-        int _enlarge = Convert.ToInt32(ConfigurationManager.AppSettings["Enlarge"]);
+
         string _companyName = ConfigurationManager.AppSettings["CompanyName"];
         int _xPos = Convert.ToInt32(ConfigurationManager.AppSettings["XPos"]);
         int _yPos = Convert.ToInt32(ConfigurationManager.AppSettings["YPos"]);
+        double scaleFactor = Convert.ToInt32(ConfigurationManager.AppSettings["ScaleFactor"]);
+
 
 
         IntPtr printer;
@@ -125,34 +127,6 @@ namespace KLWM.UserControls
                 LabPrint(wProductInfo);
             }
         }
-        /// <summary>
-        /// 标签打印
-        /// </summary>
-        /// <param name="wProductInfo"></param>
-        private void LabPrint(WProductInfo wProductInfo)
-        {
-            CPCLPrint.CPCL_AddLabel(printer, 0, 500 , 1);
-            CPCLPrint.CPCL_SetAlign(printer, 0);
-            CPCLPrint.CPCL_AddText(printer, 0, "4", 7, _xPos, _yPos, "类别:");
-            CPCLPrint.CPCL_AddText(printer, 0, "4", 7, (_xPos+100), _yPos , wProductInfo.Ptype);
-            CPCLPrint.CPCL_AddLine(printer, (_xPos+80) , (_yPos+40) , (_xPos+540) , (_yPos+40) , 1);
-
-            CPCLPrint.CPCL_AddText(printer, 0, "4", 7, _xPos , (_yPos+80) , "型号:");
-            CPCLPrint.CPCL_AddText(printer, 0, "4", 7, (_xPos+100) , (_yPos+80) , wProductInfo.PSize);
-            CPCLPrint.CPCL_AddLine(printer, (_xPos + 80) , (_yPos+120) , (_xPos + 540) , (_yPos + 120) , 1);
-
-            CPCLPrint.CPCL_AddText(printer, 0, "4", 7, _xPos , (_yPos + 160) , "厂商:");
-            CPCLPrint.CPCL_AddText(printer, 0, "4", 7, (_xPos + 100) , (_yPos + 160) , wProductInfo.PManufacturer);
-            CPCLPrint.CPCL_AddLine(printer, (_xPos + 80) , (_yPos + 200) , (_xPos + 540) , (_yPos + 200) , 1);
-
-            CPCLPrint.CPCL_AddBarCodeText(printer, 1, 8, 4, 0);
-            CPCLPrint.CPCL_AddBarCode(printer, 0, 20, 2, 10, 80, (_xPos + 40) , (_yPos + 230) , wProductInfo.PNo);
-
-            CPCLPrint.CPCL_AddText(printer, 0, "4", 2, _xPos , (_yPos + 360) , _companyName);
-            CPCLPrint.CPCL_Print(printer);
-
-        }
-
         private void GetProduteInfo()
         {
             string selType = cbxType.Text == "All" ? "" : cbxType.Text;
@@ -165,7 +139,6 @@ namespace KLWM.UserControls
 
             dgvProductType.DataSource = new BindingList<WProductInfo>(wProductInfos);
         }
-
         private void btnBatchPrint_Click(object sender, EventArgs e)
         {
             if (wProductInfos.Count!=0)
@@ -176,6 +149,105 @@ namespace KLWM.UserControls
                     Thread.Sleep(100);
                 }
             }
+        }
+        #region 标签屏蔽
+        ///// <summary>
+        ///// 标签打印
+        ///// </summary>
+        ///// <param name="wProductInfo"></param>
+        //private void LabPrint(WProductInfo wProductInfo)
+        //{
+        //    CPCLPrint.CPCL_AddLabel(printer, 0, 500, 1);
+        //    CPCLPrint.CPCL_SetAlign(printer, 0);
+        //    CPCLPrint.CPCL_AddText(printer, 0, "4", 7, _xPos, _yPos, "类别:");
+        //    CPCLPrint.CPCL_AddText(printer, 0, "4", 7, (_xPos + 100), _yPos, wProductInfo.Ptype);
+        //    CPCLPrint.CPCL_AddLine(printer, (_xPos + 80), (_yPos + 40), (_xPos + 540), (_yPos + 40), 1);
+
+        //    CPCLPrint.CPCL_AddText(printer, 0, "4", 7, _xPos, (_yPos + 80), "型号:");
+        //    CPCLPrint.CPCL_AddText(printer, 0, "4", 7, (_xPos + 100), (_yPos + 80), wProductInfo.PSize);
+        //    CPCLPrint.CPCL_AddLine(printer, (_xPos + 80), (_yPos + 120), (_xPos + 540), (_yPos + 120), 1);
+
+        //    CPCLPrint.CPCL_AddText(printer, 0, "4", 7, _xPos, (_yPos + 160), "厂商:");
+        //    CPCLPrint.CPCL_AddText(printer, 0, "4", 7, (_xPos + 100), (_yPos + 160), wProductInfo.PManufacturer);
+        //    CPCLPrint.CPCL_AddLine(printer, (_xPos + 80), (_yPos + 200), (_xPos + 540), (_yPos + 200), 1);
+
+        //    CPCLPrint.CPCL_AddBarCodeText(printer, 1, 8, 4, 0);
+        //    CPCLPrint.CPCL_AddBarCode(printer, 0, 20, 2, 10, 80, (_xPos + 40), (_yPos + 230), wProductInfo.PNo);
+
+        //    CPCLPrint.CPCL_AddText(printer, 0, "4", 2, _xPos, (_yPos + 360), _companyName);
+        //    CPCLPrint.CPCL_Print(printer);
+
+        //}
+        #endregion
+
+        private void LabPrint(WProductInfo wProductInfo)
+        {
+            // 根据缩放因子调整坐标
+            int scaledXPos = (int)(_xPos * scaleFactor);
+            int scaledYPos = (int)(_yPos * scaleFactor);
+
+            // 获取标签内容的宽度和高度
+            int labelWidth = CalculateLabelWidth(wProductInfo);
+            int labelHeight = CalculateLabelHeight(wProductInfo);
+
+            // 根据标签内容的大小调整打印内容的大小
+            int fontSize = CalculateFontSize(labelWidth, labelHeight);
+            int barcodeHeight = CalculateBarcodeHeight(labelHeight);
+
+            // 设置打印参数
+            CPCLPrint.CPCL_AddLabel(printer, 0, labelHeight, 1);
+            CPCLPrint.CPCL_SetAlign(printer, 0);
+
+            // 打印类别
+            CPCLPrint.CPCL_AddText(printer, 0, fontSize.ToString(), 7, scaledXPos, scaledYPos, "类别:");
+            CPCLPrint.CPCL_AddText(printer, 0, fontSize.ToString(), 7, (scaledXPos + 100), scaledYPos, wProductInfo.Ptype);
+            CPCLPrint.CPCL_AddLine(printer, (scaledXPos + 80), (scaledYPos + 40), (scaledXPos + 540), (scaledYPos + 40), 1);
+
+            // 打印型号
+            CPCLPrint.CPCL_AddText(printer, 0, fontSize.ToString(), 7, scaledXPos, (scaledYPos + 80), "型号:");
+            CPCLPrint.CPCL_AddText(printer, 0, fontSize.ToString(), 7, (scaledXPos + 100), (scaledYPos + 80), wProductInfo.PSize);
+            CPCLPrint.CPCL_AddLine(printer, (scaledXPos + 80), (scaledYPos + 120), (scaledXPos + 540), (scaledYPos + 120), 1);
+
+            // 打印厂商
+            CPCLPrint.CPCL_AddText(printer, 0, fontSize.ToString(), 7, scaledXPos, (scaledYPos + 160), "厂商:");
+            CPCLPrint.CPCL_AddText(printer, 0, fontSize.ToString(), 7, (scaledXPos + 100), (scaledYPos + 160), wProductInfo.PManufacturer);
+            CPCLPrint.CPCL_AddLine(printer, (scaledXPos + 80), (scaledYPos + 200), (scaledXPos + 540), (scaledYPos + 200), 1);
+
+            // 打印条形码
+            CPCLPrint.CPCL_AddBarCodeText(printer, 1, 8, 4, 0);
+            CPCLPrint.CPCL_AddBarCode(printer, 0, barcodeHeight, 2, 10, 80, (scaledXPos + 40), (scaledYPos + 230), wProductInfo.PNo);
+
+            // 打印公司名称
+            CPCLPrint.CPCL_AddText(printer, 0, fontSize.ToString(), 2, scaledXPos, (scaledYPos + 360), _companyName);
+            CPCLPrint.CPCL_Print(printer);
+        }
+
+        private int CalculateLabelWidth(WProductInfo wProductInfo)
+        {
+            // 计算标签内容的宽度
+            int maxWidth = Math.Max(wProductInfo.Ptype.Length, Math.Max(wProductInfo.PSize.Length, wProductInfo.PManufacturer.Length));
+            return maxWidth * 10 * Convert.ToInt32(scaleFactor); // 假设每个字符占10个像素
+        }
+
+        private int CalculateLabelHeight(WProductInfo wProductInfo)
+        {
+            // 计算标签内容的高度
+            return 400 * Convert.ToInt32(scaleFactor); // 假设固定高度为400像素
+        }
+
+        private int CalculateFontSize(int labelWidth, int labelHeight)
+        {
+            // 根据标签尺寸计算字体大小
+            int baseFontSize = 7 * Convert.ToInt32(scaleFactor);
+            int maxFontSize = 12 * Convert.ToInt32(scaleFactor);
+            int fontSize = baseFontSize + (labelWidth / 100); // 根据宽度调整字体大小
+            return Math.Min(fontSize, maxFontSize); // 确保字体大小不超过最大值
+        }
+
+        private int CalculateBarcodeHeight(int labelHeight)
+        {
+            // 根据标签高度计算条形码高度
+            return labelHeight * Convert.ToInt32(scaleFactor) / 5; // 假设条形码高度为标签高度的1/5
         }
     }
 }
